@@ -1,4 +1,4 @@
-# Dynamix pricing with MAB
+# Social Influence Maximization with MAB
 
 Several implementation of MAB algorithms for solving the Social Influence Maximization problem. Several algorithm have been implemented for solving the influence maximization problem using a cascade model when the probabilities of the edges are known. 
 
