@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Problem contextualization}{4}{section.1}% 
+\contentsline {section}{\numberline {2}Policies}{5}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Greedy Policy}{5}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}CELFpp Policy}{5}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Single Degree Discount Policy}{6}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Degree Discount C Policy}{6}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.5}Random Policy}{6}{subsection.2.5}% 
+\contentsline {section}{\numberline {3}Algorithm Description}{7}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Influence Maximization Problem}{7}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Online Influence Maximization Problem}{7}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}Code Structure}{10}{section.4}% 
+\contentsline {section}{\numberline {5}Results}{11}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Experiment setup}{11}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Influence Maximization}{11}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Online Influence Maximization}{16}{subsection.5.3}% 
+\contentsline {section}{\numberline {6}Conclusions}{19}{section.6}% 

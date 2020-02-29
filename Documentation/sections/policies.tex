@@ -1,0 +1,42 @@
+\newpage
+\section{Policies}
+
+We have introduced many different policies in order to solve one big problem of the Social Maximization problem, the time complexity. Unfortunately with increasingly large graphs, the computational complexity of the problem grows exponentially, and one of the best ways to regulate it is through different policies.
+
+
+\subsection{Greedy Policy}
+
+The Greedy policy is the classic policy, studied in the Kempe[1 , Maximizing the Spread of Influence through a Social
+Network, David Kempe, Jon Kleinberg, Eva Tardos] paper, to solve the influence maximization problem with a good approximation. This approximation is given by the fact that the function f(), that adds to a seed set another free node of the graph, is submodular, which mean that the marginal gain from adding an element to a set S is at least as high as the marginal gain from adding the same element to a superset of S.
+Formally, a submodular function satisfies
+$f(S \cup {v}) - f(S) \geq f(T \cup {v}) - f(T)$,
+for all elements v and all pairs of sets $S  \subseteq T$
+
+The greedy algorithm adds to the seed set, the node among the ones still free that achieves the greatest increase in the influence spread when added to the seed set.
+To extimate the influence spread of a set of seed node, we as most of research community use T repetitoin of MonteCarloSimulation on the network graph.
+Using a good T (at least 2000 to 10000 repetitions, and even more based on the number of edges of the graph) the algorithm has a good approximation of the influence spread, and can choose which node to add in the seed set.
+The complexity of the alghorithms is still too big to deal with, it is O(nkTb), considering a unitary budget, b is the budget (the max number of nodes that can be put in the seed set),
+T is the number of MonteCarlo simulation, n is the number of nodes in the graph and k the number of edges.
+\subsection{CELFpp Policy}
+To reduce the complexity, in terms of time needed to compute the algorithm, we implemented CELFpp [2 Goyal A, Lu W, Lakshmanan LV. Celf++: optimizing the greedy algorithm for influence maximization in social networks. Proceedings of the 20th international conference companion on World wide web. ACM, 2011.].
+This algorithm has the same performance, in terms of nodes selection, as the greedy algorithm, but exploits even more the submodularity of the Influence Maximization problem to reduce the complexity.
+The complexity of the CELFpp algorithm is not easy to calculate, but it runs considerably faster than the greedy algorithm as the number of nodes to put in the seed set increase.
+A more complete analysis on how this algorithm works can be found in the paper.
+
+\subsection{Single Degree Discount Policy}
+
+A policy that performs extremely badly, and relies on just selecting the node with the maximum number of outgoing edges.
+
+\subsection{Degree Discount C Policy}
+This heuristic algorith, is an evolution of the Single Degree Discount Policy, but uses a better heuristic than relying only on the number of outgoing edges.
+In this algo every time a node is selected, a discount factor is inserted in all the nodes reached by the selected node. This due to the fact that if a node n is being put in the seed set, we have a possibility that the nodes reached by the the outgoing edges of n are influenced by the diffusion process, so the algorithm is less inclined to select to buy them.
+In most research papers this algorithm is said to perform really good in terms of influence spread (only 15\%-20\% worst than the greedy/CELFpp) with a negligible time complexity (few milliseconds vs years).
+But the performance of this algorithm is only good with graphs having some standard topology and probability on the edges.
+In some other cases the performace is really bad.
+
+
+\subsection{Random Policy}
+
+The simplest of the policies, but also probably the one that perfoms the worst is the Random Policy, it simply choses a node at random on the graph and buys it.
+However if the graph analyzed has a lot of similar node structure, meanig that every node has more or less the same number of outing edges and activating probabilities on these edges, the random algorithm performs more or less as good as the other algorithms.
+If the graph has a strange topography and some nodes are more influent than others, then this algorithm doesn't perform well.
