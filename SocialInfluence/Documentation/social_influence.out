@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Problem contextualization}{}% 1
+\BOOKMARK [1][-]{section.2}{Policies}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Greedy Policy}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{CELFpp Policy}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Single Degree Discount Policy}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Degree Discount C Policy}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Random Policy}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Algorithm Description}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Influence Maximization Problem}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Online Influence Maximization Problem}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Code Structure}{}% 11
+\BOOKMARK [1][-]{section.5}{Results}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Experiment setup}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Influence Maximization}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Online Influence Maximization}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 16

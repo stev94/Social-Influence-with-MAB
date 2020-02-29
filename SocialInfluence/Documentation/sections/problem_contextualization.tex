@@ -1,0 +1,14 @@
+\newpage
+\section{Problem contextualization}
+
+The problem we are trying to tackle is how to maximize social influence in a given network given some constraints.
+These constraints are mainly regarding a budget, that is, the maximum value of nodes that can be bought inside the network.
+The objective is to reach the highest number of users with the given budget.
+This is due the fact that each node that is acquired, and is put in the Seed Set, is capable of influencing with a probability its neighbouring nodes, so all the nodes reached by an outgoing edge.
+This is done in a cascade fashion, so if node 2 is bought, and node 2 influences node 3 at time t=1, then node 3 may as well do the same to the nodes it can reach at time t=2.
+This process is over when every active node, which are the nodes influenced, attempted the influence process and terminated.
+The influence spread, which is usually what we want to maximize, is the number of nodes infleunced by the this process starting from a selected Seed set.
+Inside the graph, each node has features, and all of these features are used to build the final probability that represents an edge between two nodes.
+In order to fully estimate the effect that buying a node has, we have to simulate the activation of the edges in an iterative way.
+To do so, Monte Carlo simulations is used since is a good heuristic for the estimation of the influence spread.
+
